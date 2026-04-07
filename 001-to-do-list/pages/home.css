@@ -1,0 +1,94 @@
+:root {
+  --bg: #fff;
+  --border: #e5e4e7;
+  --border2: #bababa;
+  --text-h: #08060d;
+  --text: #3e0038;
+
+  --headingFont: "Kalam", cursive;
+  --bodyFont: "Kalam", cursive;
+
+  color: var(--text);
+  background: var(--bg);
+  margin: 2px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+#root {
+  width: 1126px;
+  max-width: 100%;
+  margin: 0 auto;
+  text-align: center;
+  border-inline: 1px solid var(--border);
+  min-height: 100svh;
+}
+
+h1 {
+  font-family: var(--headingFont);
+  font-weight: 500;
+  color: var(--text-h);
+  font-size: 56px;
+  letter-spacing: -1.68px;
+  margin: 32px 0 10px 0;
+  @media (max-width: 800px) {
+    font-size: 36px;
+    margin: 20px 0;
+  }
+}
+
+p {
+  font-family: var(--bodyFont);
+  color: var(--text-b);
+  font-size: 24px;
+
+  @media (max-width: 800px) {
+    font-size: 18px;
+  }
+}
+
+.addTask {
+  margin-bottom: 50px;
+  display: flex;
+  justify-content: center;
+}
+
+.addTask input {
+  width: 400px;
+  border-radius: 5px;
+  padding: 3px;
+  border: 1px solid var(--border2);
+  color: #0e1872;
+  margin: 0 10px;
+}
+
+.addTask button {
+  padding: 8px;
+  border: none;
+  border-radius: 5px;
+  background-color: rgb(44, 44, 183);
+  color: var(--bg);
+  font-weight: 700;
+}
+
+.task-toDo {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: left;
+}
+
+.task-toDo button {
+  padding: 5px;
+  font-size: 20px;
+  background-color: transparent;
+  border: none;
+}
+
+.task-toDo button:hover {
+  cursor: pointer;
+}
