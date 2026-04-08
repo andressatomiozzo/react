@@ -6,9 +6,9 @@ Lista de tarefas estilo To-do list.
 
 ## 🚀 Tecnologias utilizadas
 
-* HTML
-* CSS
-* JavaScript
+* HTML 5
+* CSS 3
+* JavaScript ES6+
 * React
 * Vite
 
@@ -40,8 +40,6 @@ npm run dev
 ---
 
 ## 🧠 Aprendizados
-
-Descreva o que você aprendeu com esse projeto:
 
 * Trabalhar com estado no React
 * Manipulação de DOM
