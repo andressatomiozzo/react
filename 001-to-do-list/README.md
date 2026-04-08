@@ -1,8 +1,4 @@
-# React + Vite
-
-Lista de tarefas estilo To-do list. 
-
----
+# Lista de tarefas 
 
 ## 🚀 Tecnologias utilizadas
 
@@ -25,10 +21,10 @@ Lista de tarefas estilo To-do list.
 
 ```bash
 # Clonar o repositório
-git clone https://github.com/seu-usuario/nome-do-projeto.git
+git clone https://github.com/andressatomiozzo/react.git
 
 # Entrar na pasta
-cd nome-do-projeto
+cd 001-to-do-list
 
 # Instalar dependências
 npm install

@@ -18,10 +18,10 @@ function App() {
       email,
       age
     }
-    // console.log(newUser)
 
     setUsers([...users, newUser])
-    // console.log(users)
+
+    
   };
 
   return (
