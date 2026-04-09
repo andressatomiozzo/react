@@ -1,5 +1,8 @@
 # 📌 Cadastro de usuário
 
+Página inspirada em uma aula do professor Rodolfo Mori.
+<https://www.youtube.com/watch?v=hHcaVgoLLQM>
+
 ## 🚀 Tecnologias utilizadas
 
 * HTML 5
