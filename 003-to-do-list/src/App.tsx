@@ -3,6 +3,7 @@ import { v4 as uuidv4 } from "uuid";
 import AddTask from "./components/AddTasks";
 import Tasks from "./components/Tasks";
 import "./App.css";
+import Title from "./components/title";
 
 interface tasks {
   id: string;
@@ -47,7 +48,7 @@ function App() {
 
   return (
     <div className="app">
-      <h1 className="app__title">Gerenciador de Tarefas</h1>
+      <Title>Gerenciador de Tarefas</Title>
       <AddTask onTaskAdd={onTaskAdd} />
       <Tasks tasks={tasks} onTaskClick={onTaskClick} onTaskDelete={onTaskDelete} />
     </div>
