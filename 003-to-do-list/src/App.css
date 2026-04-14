@@ -1,9 +1,13 @@
-.content {
+.app {
   width: 500px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
 }
 
-.content > h1 {
+.app__title {
+  margin-top: 20px;
   text-align: center;
   font-weight: bold;
-  color: white;
+  color: var(--primary-color);
 }

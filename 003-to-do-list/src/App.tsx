@@ -37,8 +37,8 @@ function App() {
   }
 
   return (
-    <div className="content">
-      <h1>Gerenciador de Tarefas</h1>
+    <div className="app">
+      <h1 className="app__title">Gerenciador de Tarefas</h1>
       <AddTask />
       <Tasks tasks={tasks} onTaskClick={onTaskClick} onTaskDelete={onTaskDelete} />
     </div>

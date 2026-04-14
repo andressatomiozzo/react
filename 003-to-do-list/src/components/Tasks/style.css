@@ -1,24 +1,24 @@
-ul {
+.tasks {
   padding: 10px;
-  background-color: #c8f6ff;
+  background-color: var(--primary-color);
   border-radius: 5px;
   min-height: 150px;
 }
 
-li {
+.tasks__item {
   display: grid;
   grid-template-columns: 1fr auto auto;
   justify-content: space-between;
 }
 
-button {
+.tasks__item__title, .tasks__item__about, .tasks__item__delete {
   padding: 8px;
   margin: 5px;
   border-radius: 5px;
-  background-color: #047b93;
+  background-color: var(--secondary-color);
   color: white;
   font-weight: 550;
   text-align: left;
   font-size: 15px;
-  cursor: pointer;
 }
+

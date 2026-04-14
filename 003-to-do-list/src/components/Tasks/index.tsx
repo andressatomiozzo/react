@@ -7,16 +7,18 @@ interface props {
   onTaskDelete: (taskId: number) => void;
 }
 
-function Tasks({tasks, onTaskClick, onTaskDelete}: props) {
+function Tasks({ tasks, onTaskClick, onTaskDelete }: props) {
   return (
-    <ul>
+    <ul className="tasks">
       {tasks.map((task) => (
-        <li key={task.id}>
-          <button onClick={() => onTaskClick(task.id)}>{task.title}</button>
-          <button>
+        <li className="tasks__item" key={task.id}>
+          <button className="tasks__item__title" onClick={() => onTaskClick(task.id)}>
+            {task.title}
+          </button>
+          <button className="tasks__item__about">
             <ChevronRightIcon />
           </button>
-          <button onClick={() => onTaskDelete(task.id)}>
+          <button className="tasks__item__delete" onClick={() => onTaskDelete(task.id)}>
             <TrashIcon />
           </button>
         </li>
