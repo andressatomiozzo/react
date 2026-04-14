@@ -36,10 +36,21 @@ function App() {
     setTasks(newTasks);
   }
 
+  function onTaskAdd(title: string, description: string) {
+    const newTask = {
+      id: Date.now(),
+      title,
+      description,
+      completed: false,
+    };
+
+    setTasks([...tasks, newTask]);
+  }
+
   return (
     <div className="app">
       <h1 className="app__title">Gerenciador de Tarefas</h1>
-      <AddTask />
+      <AddTask onTaskAdd={onTaskAdd} />
       <Tasks tasks={tasks} onTaskClick={onTaskClick} onTaskDelete={onTaskDelete} />
     </div>
   );
