@@ -16,7 +16,10 @@ function Tasks({ tasks, onTaskClick, onTaskDelete }: props) {
   const navigate = useNavigate();
 
   function onSeeDetailClick(task: task) {
-    navigate(`/task?title=${task.title}&description=${task.description}`)
+    const query = new URLSearchParams()
+    query.set("title", task.title)
+    query.set("description", task.description)
+    navigate(`/task?${query.toString()}`)
   }
 
   return (

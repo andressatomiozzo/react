@@ -1,11 +1,46 @@
 .description-page {
-
+  width: 500px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
 }
 
-:root {
-  --primary-color: #e0e0e0;
-  --secondary-color: #939393;
-  --tertiary-color: #303030;
-  --bg-color: #2d2d2d;
-  --hilight-color: #00849e;
+.description-page__first-line {
+  margin-top: 20px;
+  display: grid;
+  grid-template-columns: auto 1fr;
+}
+
+.description-page__first-line > button {
+  background-color: transparent;
+  color: var(--primary-color);
+}
+
+.description-page__title {
+  text-align: center;
+  font-weight: bold;
+  color: var(--primary-color);
+}
+
+.description-page__task{
+  background-color: var(--primary-color);
+  border-radius: 5px;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.description-page__task__title{
+  margin-left: 8px;
+}
+
+.description-page__task__description {
+  padding: 8px;
+  border-radius: 5px;
+  background-color: var(--secondary-color);
+  color: white;
+  font-weight: 550;
+  text-align: left;
+  font-size: 15px;
 }
