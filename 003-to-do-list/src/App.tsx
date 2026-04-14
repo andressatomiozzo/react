@@ -1,5 +1,5 @@
-import { useState } from "react";
-import { v4 as uuidv4 } from 'uuid';
+import { useEffect, useState } from "react";
+import { v4 as uuidv4 } from "uuid";
 import AddTask from "./components/AddTasks";
 import Tasks from "./components/Tasks";
 import "./App.css";
@@ -12,7 +12,7 @@ interface tasks {
 }
 
 function App() {
-  const [tasks, setTasks] = useState<tasks[]>([]);
+  const [tasks, setTasks] = useState<tasks[]>(JSON.parse(localStorage.getItem("tasks") ?? "[]") || []);
 
   function onTaskAdd(title: string, description: string) {
     const newTask = {
@@ -24,6 +24,10 @@ function App() {
 
     setTasks([...tasks, newTask]);
   }
+
+  useEffect(() => {
+    localStorage.setItem("tasks", JSON.stringify(tasks));
+  }, [tasks]);
 
   function onTaskClick(taskId: string) {
     const newTasks = tasks.map((task) => {
