@@ -1,26 +1,31 @@
+import { useState } from "react";
+import { v4 as uuidv4 } from 'uuid';
 import AddTask from "./components/AddTasks";
 import Tasks from "./components/Tasks";
 import "./App.css";
-import { useState } from "react";
+
+interface tasks {
+  id: string;
+  title: string;
+  description: string;
+  completed: boolean;
+}
 
 function App() {
-  const [tasks, setTasks] = useState([
-    { id: 1, title: "Estudar React", description: "Estudar os conceitos básicos de React, como componentes, props e estado.", completed: false },
-    {
-      id: 2,
-      title: "Criar um projeto",
-      description: "Criar um projeto simples usando React para praticar os conceitos aprendidos.",
-      completed: false,
-    },
-    {
-      id: 3,
-      title: "Aprender sobre hooks",
-      description: "Estudar os hooks do React, como useState e useEffect, para gerenciar estado e efeitos colaterais.",
-      completed: false,
-    },
-  ]);
+  const [tasks, setTasks] = useState<tasks[]>([]);
 
-  function onTaskClick(taskId: number) {
+  function onTaskAdd(title: string, description: string) {
+    const newTask = {
+      id: uuidv4(),
+      title,
+      description,
+      completed: false,
+    };
+
+    setTasks([...tasks, newTask]);
+  }
+
+  function onTaskClick(taskId: string) {
     const newTasks = tasks.map((task) => {
       if (task.id === taskId) {
         return { ...task, completed: !task.completed };
@@ -31,20 +36,9 @@ function App() {
     setTasks(newTasks);
   }
 
-  function onTaskDelete(taskId: number) {
+  function onTaskDelete(taskId: string) {
     const newTasks = tasks.filter((task) => task.id !== taskId);
     setTasks(newTasks);
-  }
-
-  function onTaskAdd(title: string, description: string) {
-    const newTask = {
-      id: Date.now(),
-      title,
-      description,
-      completed: false,
-    };
-
-    setTasks([...tasks, newTask]);
   }
 
   return (

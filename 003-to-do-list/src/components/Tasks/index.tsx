@@ -2,9 +2,9 @@ import { ChevronRightIcon, TrashIcon } from "lucide-react";
 import "./style.css";
 
 interface props {
-  tasks: { id: number; title: string; description: string; completed: boolean }[];
-  onTaskClick: (taskId: number) => void;
-  onTaskDelete: (taskId: number) => void;
+  tasks: { id: string; title: string; description: string; completed: boolean }[];
+  onTaskClick: (taskId: string) => void;
+  onTaskDelete: (taskId: string) => void;
 }
 
 function Tasks({ tasks, onTaskClick, onTaskDelete }: props) {
