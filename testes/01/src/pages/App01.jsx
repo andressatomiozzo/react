@@ -26,13 +26,14 @@ const mario = {
   ativa: false,
 };
 
-const App = () => {
+const App01 = () => {
   const dados = luana;
 
   const totalGasto = dados.compras.map((item) => Number(item.preco.replace("R$ ", ""))).reduce((acc, preco) => acc + preco);
 
   return (
-    <div>
+    <section>
+      <h1>Atividade 01</h1>
       <p>Nome: {dados.cliente}</p>
       <p>Idade: {dados.idade}</p>
       <p>
@@ -40,8 +41,8 @@ const App = () => {
       </p>
       <p>Total gasto: {totalGasto}</p>
       {totalGasto > 1000 && <p>Você está gastanto muito</p>}
-    </div>
+    </section>
   );
 };
 
-export default App;
+export default App01;
