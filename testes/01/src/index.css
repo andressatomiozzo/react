@@ -74,6 +74,7 @@ textarea:focus {
 }
 
 button {
+  margin: 10px;
   cursor: pointer;
   border: none;
   border-radius: var(--radius);
