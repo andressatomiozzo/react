@@ -2,15 +2,18 @@ import React from "react";
 import { GlobalContext } from "./GlobalContext";
 
 const Produto = () => {
-  const dados = React.useContext(GlobalContext);
-  console.log(dados)
-  const handleClick = () => {
-    dados.setContar(contar => contar + 1)
-  }
+  const global = React.useContext(GlobalContext);
+
+  if (global.dados === null) return null;
   return (
     <div>
-      <p>Contador = {dados.contar}</p>
-      <button onClick={handleClick}>Adicionar</button>
+      <h1>Produtos:</h1>
+      <ul>
+        {global.dados.map((produto) => (
+          <li key={produto.id}>{produto.nome}</li>
+        ))}
+      </ul>
+      <button onClick={global.limparDados}>Limpar dados</button>
     </div>
   );
 };
