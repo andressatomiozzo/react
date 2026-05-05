@@ -10,6 +10,7 @@ import App07 from "./pages/07/App07.jsx";
 import App08 from "./pages/08/App08.jsx";
 import App09 from "./pages/09/App09.jsx";
 import App10 from "./pages/10/App10.jsx";
+import App11 from "./pages/11/App11.jsx";
 
 createRoot(document.getElementById("root")).render(
   <>
@@ -22,6 +23,7 @@ createRoot(document.getElementById("root")).render(
     {/* <App07 /> */}
     {/* <App08 /> */}
     {/* <App09 /> */}
-    <App10 />
+    {/* <App10 /> */}
+    <App11 />
   </>,
 );
