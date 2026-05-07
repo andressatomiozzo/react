@@ -11,3 +11,10 @@ const Input = ({ id, label, onChange, value, type, onBlur, placeholder, error, }
 };
 
 export default Input;
+
+
+const WebDeveloper = {
+  name: "Andressa Tomiozzo",
+  stack: ["HTML", "CSS", "JavaScript", "React"],
+  passion: "Building beautiful interfaces"
+}
