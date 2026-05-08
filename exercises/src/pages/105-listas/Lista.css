@@ -1,0 +1,3 @@
+.lista::first-letter{
+  text-transform: uppercase;
+}
