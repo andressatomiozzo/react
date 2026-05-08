@@ -2,14 +2,14 @@ import React from "react";
 
 const InputRadio = ({ options, value, setValue }) => {
   return (
-    <>
+    <fieldset>
       {options.map((option) => (
         <label key={option}>
           <input type="radio" value={option} checked={value === option} onChange={({ target }) => setValue(target.value)} />
           {option}
         </label>
       ))}
-    </>
+    </fieldset>
   );
 };
 

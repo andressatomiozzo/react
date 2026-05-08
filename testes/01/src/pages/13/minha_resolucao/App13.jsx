@@ -1,6 +1,6 @@
 import React from "react";
 import InputRadio from "./form/InputRadio";
-import { perguntas } from "./data";
+import { perguntas } from "../minha_resolucao/data";
 
 const App13 = () => {
   const [p1, setP1] = React.useState("");
