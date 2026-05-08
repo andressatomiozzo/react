@@ -12,8 +12,8 @@ import App09 from "./pages/09/App09.jsx";
 import App10 from "./pages/10/App10.jsx";
 import App11 from "./pages/11/App11.jsx";
 import App12 from "./pages/12/App12.jsx";
-// import App13 from "./pages/13/minha_resolucao/App13.jsx";
-import App13 from "./pages/13/resolucao_professor/App13.jsx";
+import App13 from "./pages/13/minha_resolucao/App13.jsx";
+// import App13 from "./pages/13/resolucao_professor/App13.jsx";
 
 createRoot(document.getElementById("root")).render(
   <>
