@@ -9,15 +9,17 @@ import "./App.css"
 
 const App = () => {
   return (
-    <BrowserRouter>
-      <Header />
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="contato" element={<Contato />} />
-          <Route path="produtos/:id" element={<Produtos />} />
-        </Routes>
-      <Footer />
-    </BrowserRouter>
+    <div className="App">
+      <BrowserRouter>
+        <Header />
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="contato" element={<Contato />} />
+            <Route path="produtos/:id" element={<Produtos />} />
+          </Routes>
+        <Footer />
+      </BrowserRouter>
+    </div>
   );
 };
 

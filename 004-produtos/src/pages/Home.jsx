@@ -27,14 +27,16 @@ const Home = () => {
     buscar();
   }, []);
 
+  if(loading === true) return <div className="loading"></div>
+  if(dados === null) return null;
   return (
-    <main className={styles.main}>
+    <main className={`${styles.main} animeLeft`}>
+      <Head title="Ranek" description="Página inicial" />
 
-      {loading === true && <p>Carregando...</p>}
       {dados &&
         dados.map((produto) => (
           <Link to={`produtos/${produto.id}`} key={produto.id}>
-            <img className={styles.img} src={produto.fotos[0].src} alt={`Imagem de um ${produto.nome}`} />
+            <img className={styles.img} src={produto.fotos[0].src} alt={produto.fotos[0].title} />
             <p>{produto.nome}</p>
           </Link>
         ))}

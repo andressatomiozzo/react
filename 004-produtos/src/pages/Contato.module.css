@@ -6,3 +6,7 @@
 .main img {
   height: 350px;
 }
+
+.main ul {
+  padding: 0;
+}

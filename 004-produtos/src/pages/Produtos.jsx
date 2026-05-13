@@ -8,6 +8,7 @@ const Produtos = () => {
 
   const [dados, setDados] = React.useState(null);
   const [loading, setLoading] = React.useState(false);
+  const [error, setError] = React.useState(null);
 
   const buscar = async (produto) => {
     let resposta;
@@ -17,32 +18,33 @@ const Produtos = () => {
       resposta = await fetch(`https://ranekapi.origamid.dev/json/api/produto/${produto}`);
       json = await resposta.json();
       if (!resposta.ok) return err;
+      setDados(json);
     } catch (err) {
-      console.log("Ops, algo deu errado");
+      setError("Ops, algo deu errado");
     } finally {
       setLoading(false);
-      setDados(json);
     }
   };
 
   React.useEffect(() => {
     buscar(params.id);
-  }, []);
+  }, [params.id]);
 
+  if(loading) return <div className="loading"></div>
+  if(error) return <p>{error}</p>
+  if(dados === null) return null
   return (
     <>
-      <Head title="Ranek | Produtos" description="Página dos produtos" />
-
-      {loading && <p>Carregando...</p>}
+      <Head title={`Ranek | ${dados.nome}`} description={`Esse é um produto ${dados.nome}`} />
       {dados && (
-        <main className={styles.main}>
-          <img src={dados.fotos[0].src} alt={`Imagem de um ${dados.nome}`} />
+        <section className={`${styles.main} animeLeft`}>
+          <div>{dados.fotos.map(foto => <img key={foto.src} src={foto.src} alt={foto.descricao} />)}</div>
           <div>
             <h1>{dados.nome}</h1>
             <span>R$ {dados.preco}</span>
             <p>{dados.descricao}</p>
           </div>
-        </main>
+        </section>
       )}
     </>
   );

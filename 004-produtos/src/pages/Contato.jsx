@@ -5,17 +5,17 @@ import Head from "../Head";
 
 const Contato = () => {
   return (
-    <main className={styles.main}>
-      <Head title="Ranek | Contato" description="Página de contato"/>
+    <section className={`${styles.main} animeLeft`}>
+      <Head title="Ranek | Contato" description="Entre em contato"/>
       <img src={maquina} alt="Imagem de uma máquina de escrever" />
       <div>
-        <h2>Entre em contato</h2>
+        <h1>Entre em contato</h1>
         <ul>
           <li>andressa.tomiozzo.dev@gmail.com</li>
           <li>(65) 999855542</li>
         </ul>
       </div>
-    </main>
+    </section>
   );
 };
 

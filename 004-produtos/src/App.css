@@ -1,3 +1,55 @@
-main {
+.App {
+  display: flex;
+  flex-direction: column;
+  min-height: calc(100vh + 10rem);
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 1.5rem;
+}
+
+main,
+section {
   flex-grow: 1;
+}
+
+li {
+  list-style-type: none;
+}
+
+img {
+  max-width: 100%;
+  border-radius: 5px;
+}
+
+h1 {
+  font-size: 2rem;
+}
+
+
+.animeLeft {
+  transform: translateX(-20px);
+  opacity: 0;
+  animation: animeLeft 0.3s forwards;
+}
+
+@keyframes animeLeft {
+  to {
+    opacity: initial;
+    transform: initial;
+  }
+}
+
+.loading {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  border: 10px solid #ccc;
+  border-right-color: transparent;
+  animation: loading 1s infinite;
+}
+
+@keyframes loading {
+  to {
+    transform: rotate(360deg);
+  }
 }

@@ -118,10 +118,4 @@ a {
   color: black;
 }
 
-#root {
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
-  margin: 0;
-  padding: 1.5rem;
-}
+

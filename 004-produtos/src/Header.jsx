@@ -6,8 +6,12 @@ const Header = () => {
   return (
     <header>
       <nav className='navHeader'>
-        <NavLink className="linksNavHeader" to="/">Home</NavLink>
-        <NavLink className="linksNavHeader" to="contato">Contato</NavLink>
+        <li>
+          <NavLink className="linksNavHeader" to="/" end>Home</NavLink>
+        </li>
+        <li>
+          <NavLink className="linksNavHeader" to="contato">Contato</NavLink>
+        </li>
       </nav>
     </header>
   )
