@@ -6,7 +6,7 @@ const Home = () => {
 
   const buscar = async () => {
     try {
-      const resposta = await fetch(`https://ranekapi.origamid.dev/json/api/produto/`);
+      const resposta = await fetch(`https://ranekapi.origamid.dev/json/api/produto`);
       const json = await resposta.json();
       if (!resposta.ok) return err;
       setDados(json);
