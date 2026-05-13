@@ -5,15 +5,21 @@ import Head from "../Head";
 
 const Home = () => {
   const [dados, setDados] = React.useState([]);
+  const [loading, setLoading] = React.useState(false);
 
   const buscar = async () => {
+    let response;
+    let json;
     try {
-      const resposta = await fetch(`https://ranekapi.origamid.dev/json/api/produto`);
-      const json = await resposta.json();
-      if (!resposta.ok) return err;
-      setDados(json);
+      setLoading(true);
+      response = await fetch(`https://ranekapi.origamid.dev/json/api/produto`);
+      json = await response.json();
+      if (!response.ok) return err;
     } catch (err) {
       console.log("Ops, algo deu errado");
+    } finally {
+      setDados(json);
+      setLoading(false);
     }
   };
 
@@ -23,7 +29,8 @@ const Home = () => {
 
   return (
     <main className={styles.main}>
-      <Head title="Ranek | Home" description="Página Home" />
+
+      {loading === true && <p>Carregando...</p>}
       {dados &&
         dados.map((produto) => (
           <Link to={`produtos/${produto.id}`} key={produto.id}>
