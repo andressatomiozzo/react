@@ -1,0 +1,14 @@
+.main {
+  display: flex;
+  gap: 20px;
+}
+
+.main img {
+  height: 500px;
+}
+
+.main span {
+  background-color: rgb(171, 255, 175);
+  padding: 3px 8px;
+  border-radius: 5px;
+}

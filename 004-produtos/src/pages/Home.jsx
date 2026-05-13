@@ -1,5 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import styles from "./Home.module.css";
+import Head from "../Head";
 
 const Home = () => {
   const [dados, setDados] = React.useState([]);
@@ -20,15 +22,16 @@ const Home = () => {
   }, []);
 
   return (
-    <div>
+    <main className={styles.main}>
+      <Head title="Ranek | Home" description="Página Home" />
       {dados &&
         dados.map((produto) => (
           <Link to={`produtos/${produto.id}`} key={produto.id}>
-            <img src={produto.fotos[0].src} alt={`Imagem de um ${produto.nome}`} />
+            <img className={styles.img} src={produto.fotos[0].src} alt={`Imagem de um ${produto.nome}`} />
             <p>{produto.nome}</p>
           </Link>
         ))}
-    </div>
+    </main>
   );
 };
 
