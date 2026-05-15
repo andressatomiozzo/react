@@ -5,7 +5,7 @@ const App203 = () => {
   return (
     <div>
       <label htmlFor="texto">Digite seu nome:</label>
-      <input type="text" id='texto' name='texto' onChange={(e) => setTexto(e.target.value)} />
+      <input type="text" id='texto' name='texto' value={texto} onChange={(e) => setTexto(e.target.value)} />
       <p>{texto}</p>
     </div>
   )
