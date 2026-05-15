@@ -7,4 +7,5 @@ Esta pasta é destinada aos meus exercícios em React.
   * 105: array de strings como props
 
 # 201 - 300 - React e Custom Hooks
-  * 202: useState e useReducer
+  * 202: useState ou useReducer
+  * 203: useState e input-text
