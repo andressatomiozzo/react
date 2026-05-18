@@ -1,10 +1,10 @@
 import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
 import './index.css'
-import App204 from './pages/204-lista-de-tarefas/App204'
+import App205 from './pages/205-toggle_de_tema/App205'
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-    <App204 />
+    <App205 />
   </StrictMode>,
 )
