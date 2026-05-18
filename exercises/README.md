@@ -10,3 +10,4 @@ Esta pasta é destinada aos meus exercícios em React.
   * 202: useState ou useReducer
   * 203: useState - input simples
   * 204: useState - adiciona, deleta e edita uma tarefa
+  * 206: useState e useEffect - muda o título da página conforme uma variável
