@@ -11,3 +11,5 @@ Esta pasta é destinada aos meus exercícios em React.
   * 203: useState - input simples
   * 204: useState - adiciona, deleta e edita uma tarefa
   * 206: useState e useEffect - muda o título da página conforme uma variável
+  * 207: useEffect, setInterval, clearInterval - Relógio que atualiza de segundo em segundo
+  * 208: useState e useEffect - consumo de API - método GET
