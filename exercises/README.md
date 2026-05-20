@@ -13,3 +13,4 @@ Esta pasta é destinada aos meus exercícios em React.
   * 206: useState e useEffect - muda o título da página conforme uma variável
   * 207: useEffect, setInterval, clearInterval - Relógio que atualiza de segundo em segundo
   * 208: useState e useEffect - consumo de API - método GET
+  * 209: useState, useReact e .addEventListener - ver a largura da página
