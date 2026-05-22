@@ -15,3 +15,5 @@ Esta pasta é destinada aos meus exercícios em React.
   * 208: useState e useEffect - consumo de API - método GET
   * 209: useState, useReact e .addEventListener - ver a largura da página
   * 210: useEffect e useRef - botando um input em foco assim que a página carregar
+  * 211: useState e useRef - montando um cronômetro, que inicia, pausa e reseta
+  * 212: useState, useEffect e useRef - observando quantas vezes um componente renderizou
