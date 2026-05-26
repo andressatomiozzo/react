@@ -1,11 +1,10 @@
-import { StrictMode } from 'react'
-import { createRoot } from 'react-dom/client'
-import './index.css'
-import App212 from './pages/212-Contador_de_renders/App212'
+import { StrictMode } from "react";
+import { createRoot } from "react-dom/client";
+import "./index.css";
+import App213 from "./pages/213-Evitando_recriacao_de_funcao/App213";
 
-
-createRoot(document.getElementById('root')).render(
+createRoot(document.getElementById("root")).render(
   <StrictMode>
-    <App212 />
+    <App213 />
   </StrictMode>,
-)
+);

@@ -17,3 +17,4 @@ Esta pasta é destinada aos meus exercícios em React.
   * 210: useEffect e useRef - botando um input em foco assim que a página carregar
   * 211: useState e useRef - montando um cronômetro, que inicia, pausa e reseta
   * 212: useState, useEffect e useRef - observando quantas vezes um componente renderizou
+  * 213: useCallback e React.memo - evitar reinderização caso as props do filho não mudar
