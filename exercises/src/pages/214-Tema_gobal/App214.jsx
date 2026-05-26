@@ -4,7 +4,7 @@ import { TemaProvider } from "./temaContext";
 const App214 = () => {
 
   return (
-    <TemaProvider>
+    <TemaProvider> //QUalquer componente aqui dentro consegue acessar as variáveis descritas no TemaProvider
       <Componente />
     </TemaProvider>
   );

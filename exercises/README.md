@@ -19,3 +19,4 @@ Esta pasta é destinada aos meus exercícios em React.
   * 212: useState, useEffect e useRef  - observando quantas vezes um componente renderizou
   * 213: useCallback e React.memo      - useCallback -> evitar criar novas funções. React.memo -> evitar reinderização de um componente filho
   * 214: createContext e useContext    - mudar o tema de escuro para claro -> variável global
+  * 215: createContext e useContext    - login -> variável global
