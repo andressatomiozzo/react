@@ -12,10 +12,10 @@ export interface TransacaoAPI {
   ["Cliente Novo"]: number;
 }
 
-interface Transacao {
+export interface Transacao {
   nome: string;
   id: number;
-  data: string;
+  data: Date;
   status: TransacaoStatus;
   email: string;
   moeda: string;
@@ -24,7 +24,7 @@ interface Transacao {
   novo: boolean;
 }
 
-export const normalizarTransacao = (transacao: TransacaoAPI) => {
+export const normalizarTransacao = (transacao: TransacaoAPI): Transacao => {
   const curancyToNumber = (moeda: string): number | null => {
     const numero = Number(moeda.replaceAll(".", "").replace(",", "."));
     return isNaN(numero) ? null : numero;

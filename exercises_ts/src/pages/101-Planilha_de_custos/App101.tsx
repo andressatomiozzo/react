@@ -1,6 +1,8 @@
 import React, { useEffect } from "react";
 import useFetch from "./useFetch";
 import { normalizarTransacao, type TransacaoAPI } from "./normalizarTransacao";
+import Statistics from "./Statistics";
+import Table from "./Table";
 
 const App101 = () => {
   const { data, loading, error, request } = useFetch<TransacaoAPI[]>();
@@ -10,15 +12,15 @@ const App101 = () => {
   }, [request]);
 
   if (data && Array.isArray(data)) {
-    const transacoes = data.map(normalizarTransacao);
-    console.log(
-      transacoes.forEach((item) => {
-        console.log(item.data );
-      }),
+    const dataNormalizado = data.map((item) => normalizarTransacao(item));
+    return (
+      <div>
+        <Statistics dados={dataNormalizado} />
+        <Table dados={dataNormalizado} />
+      </div>
     );
   }
-
-  return <div>oie</div>;
+  return null;
 };
 
 export default App101;
