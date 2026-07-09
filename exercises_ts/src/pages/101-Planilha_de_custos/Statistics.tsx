@@ -1,7 +1,7 @@
 import React from "react";
 import type { Transacao } from "./normalizarTransacao";
 import { countBy } from "./countBy";
-import type CountList from "./countBy";
+import type {CountList} from "./countBy";
 
 const Statistics = ({ dados }: { dados: Transacao[] }) => {
   const total = () => {
