@@ -1,19 +1,6 @@
 import React, { useEffect } from "react";
 import useFetch from "./useFetch";
-
-type TransacaoPagamento = "Cartão de Crédito" | "Boleto";
-type TransacaoStatus = "Paga" | "Recusada pela operadora de cartão" | "Aguardando pagamento" | "Estornada";
-
-interface TransacaoAPI {
-  Nome: string;
-  ID: number;
-  Data: string;
-  Status: TransacaoStatus;
-  Email: string;
-  ["Valor (R$)"]: string;
-  ["Cliente Novo"]: number;
-  ["Forma de Pagamento"]: TransacaoPagamento;
-}
+import { normalizarTransacao, type TransacaoAPI } from "./normalizarTransacao";
 
 const App101 = () => {
   const { data, loading, error, request } = useFetch<TransacaoAPI[]>();
@@ -23,9 +10,12 @@ const App101 = () => {
   }, [request]);
 
   if (data && Array.isArray(data)) {
-    data.forEach((item) => {
-      console.log(item)
-    });
+    const transacoes = data.map(normalizarTransacao);
+    console.log(
+      transacoes.forEach((item) => {
+        console.log(item.data );
+      }),
+    );
   }
 
   return <div>oie</div>;
